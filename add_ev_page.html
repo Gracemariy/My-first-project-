@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add EV</title>
+    <link type="text/css" href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet"/>
+</head>
+<body>
+    <h2>Add EV</h2>
+    <form action="/add_ev/" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="make" required><br> <!-- Changed name attribute to make -->
+        <label for="manufacturer">Manufacturer:</label><br>
+        <input type="text" id="manufacturer" name="manufacturer" required><br>
+        <label for="year">Year:</label><br>
+        <input type="number" id="year" name="year" required><br>
+        <label for="battery_size">Battery Size (Kwh):</label><br>
+        <input type="number" id="battery_size" name="battery_size" step="any" required><br>
+        <label for="wltp_range">WLTP Range (Km):</label><br>
+        <input type="number" id="wltp_range" name="wltp_range" step="any" required><br>
+        <label for="cost">Cost:</label><br>
+        <input type="number" id="cost" name="cost" step="any" required><br>
+        <label for="power">Power (Kw):</label><br>
+        <input type="number" id="power" name="power" step="any" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
